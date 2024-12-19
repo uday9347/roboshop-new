@@ -6,6 +6,7 @@ TIME=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIME.log"
 
 ID =$(id -u)
+echo "$ID"
 
 if [ $ID -ne 0 ]
 then 
