@@ -48,7 +48,12 @@ mkdir -p /app &>> $LOGFILE
 VALIDATE $? "the app directory creation"
 
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip  &>> $LOGFILE
-echo "$?"
+if [ $? -ne 23 ]
+then 
+        echo "the files are being downlaoded"
+else
+        echo "the files are already exists"
+fi 
 
 cd /app &>> $LOGFILE
 VALIDATE $? "switching into app directory"
