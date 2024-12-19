@@ -59,7 +59,7 @@ VALIDATE $? "unziping in the environment"
 npm install &>> $LOGFILE
 VALIDATE $? "Installing the dependencies"
 
-cp /home/ec2-user/catalogue/catalogue.service /etc/systemd/system/  &>> $LOGFILE
+cp /home/ec2-user/roboshop-new/catalogue/catalogue.service /etc/systemd/system/  &>> $LOGFILE
 VALIDATE $? "craeting the catalogue service"
 
 systemctl daemon-reload &>> $LOGFILE
@@ -71,7 +71,7 @@ VALIDATE $? "enabling the service"
 systemctl start catalogue &>> $LOGFILE
 VALIDATE $? "starting the service"
 
-cp /home/ec2-user/catalogue/mongo.repo /etc/yum.repos.d &>> $LOGFILE
+cp  /home/ec2-user/roboshop-new/catalogue/mongo.repo /etc/yum.repos.d &>> $LOGFILE
 VALIDATE $? "creating mongo repo"
 
 dnf install -y mongodb-mongosh &>> $LOGFILE
