@@ -5,7 +5,7 @@ TIME=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIME.log"
 MONGOIP=172.31.90.238
 
-ID =$(id -u)
+ID=$(id -u)
 
 if [ $ID -ne 0 ]
 then 
