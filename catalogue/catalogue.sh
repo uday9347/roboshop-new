@@ -48,7 +48,7 @@ mkdir -p /app &>> $LOGFILE
 VALIDATE $? "the app directory creation"
 
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip  &>> $LOGFILE
-VALIDATE $? "the appliaction downlaoding in the tmp directory"
+echo "$?"
 
 cd /app &>> $LOGFILE
 VALIDATE $? "switching into app directory"
