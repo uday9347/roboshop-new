@@ -53,7 +53,7 @@ VALIDATE $? "the appliaction downlaoding in the tmp directory"
 cd /app &>> $LOGFILE
 VALIDATE $? "switching into app directory"
 
-unzip /tmp/catalogue.zip &>> $LOGFILE
+unzip -o /tmp/catalogue.zip &>> $LOGFILE
 VALIDATE $? "unziping in the environment"
 
 npm install &>> $LOGFILE
