@@ -5,7 +5,7 @@
 TIME=$(date +%F-%H-%M-%S)
 LOGFILE=/"tmp/$0-$TIME.log"
 
-ID =$(id -u)
+ID =($id -u)
 
 if [ $ID -ne 0 ]
 then 
@@ -13,6 +13,7 @@ then
     exit 1
 else
     echo "root user"
+fi
 
 VALIDATE ()
 {
@@ -21,6 +22,7 @@ VALIDATE ()
         echo "$2...failed"
     else
         echo "$2..success"
+    fi
 }
 
 cp mongo.repo /etc/yum.repos.d &>> $LOGFILE
