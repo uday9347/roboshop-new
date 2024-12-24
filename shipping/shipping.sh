@@ -50,7 +50,7 @@ VALIDATE $? "insatlling zip "
 cd /app  &>> $LOGFILE
 VALIDATE $? "changing dir"
 
-unzip /tmp/shipping.zip  &>> $LOGFILE
+unzip -0 /tmp/shipping.zip  &>> $LOGFILE
 VALIDATE $? "unzip"
 
 cd /app  &>> $LOGFILE
