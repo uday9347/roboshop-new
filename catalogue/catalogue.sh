@@ -3,7 +3,7 @@
 #user check 
 TIME=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIME.log"
-MONGOIP=172.31.90.238
+MONGOIP=172.31.18.255
 
 ID=$(id -u)
 
