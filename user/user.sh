@@ -84,6 +84,6 @@ VALIDATE $? "creating mongo repo"
 dnf install -y mongodb-mongosh &>> $LOGFILE
 VALIDATE $? "installing mongodb shell"
 
-
+echo "$MONGOIP"
 mongosh --host  $MONGOIP </app/schema/user.js &>> $LOGFILE
 VALIDATE  $? "loading catalogue data in mongodb"
