@@ -47,12 +47,14 @@ mkdir -p /app
 curl -L -o /tmp/shipping.zip https://roboshop-builds.s3.amazonaws.com/shipping.zip &>> $LOGFILE
 VALIDATE $? "insatlling zip "
 
-cd /app
+cd /app  &>> $LOGFILE
+VALIDATE $? "changing dir"
 
 unzip /tmp/shipping.zip  &>> $LOGFILE
 VALIDATE $? "unzip"
 
-cd /app
+cd /app  &>> $LOGFILE
+VALIDATE $? "changing dir"
 
 mvn clean package &>> $LOGFILE
 VALIDATE $? "installing dependencies "
