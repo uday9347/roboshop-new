@@ -68,11 +68,11 @@ systemctl start shipping
 dnf install mysql -y &>> $LOGFILE
 VALIDATE $? "installing sql "
 
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/db/schema.sql
+mysql -h 172.31.28.30 -uroot -pRoboShop@1 < /app/db/schema.sql
 
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/db/app-user.sql 
+mysql -h 172.31.28.30 -uroot -pRoboShop@1 < /app/db/app-user.sql 
 
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/db/master-data.sql &>> $LOGFILE
+mysql -h 172.31.28.30 -uroot -pRoboShop@1 < /app/db/master-data.sql &>> $LOGFILE
 VALIDATE $? "added schema to db "
 
 systemctl restart shipping
