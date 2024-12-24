@@ -65,7 +65,7 @@ VALIDATE $? "redirecting to the  the app directory"
 npm install &>> LOGFILE
 VALIDATE $? "installing the dependencies"
 
-cp /home/ec2-user/user/user.service /etc/systemd/system/user.service  &>> LOGFILE
+cp /home/ec2-user/roboshop-new/user/user.service /etc/systemd/system/user.service  &>> LOGFILE
 VALIDATE $? "copying the files to sytemd "
 
 systemctl daemon-reload &>> $LOGFILE
