@@ -3,7 +3,7 @@
 #user check 
 TIME=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIME.log"
-exec &> LOGFILE
+exec &>$LOGFILE
 
 
 ID=$(id -u)
