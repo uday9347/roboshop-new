@@ -83,5 +83,5 @@ dnf install -y mongodb-mongosh &>> $LOGFILE
 VALIDATE $? "installing mongodb shell"
 
 
-mongosh --host $MONGOIP </app/schema/catalogue.js &>> $LOGFILE
+mongosh --host  172.31.21.220</app/schema/catalogue.js &>> $LOGFILE
 VALIDATE  $? "loading catalogue data in mongodb"

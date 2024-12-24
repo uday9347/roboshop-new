@@ -10,3 +10,7 @@ SyslogIdentifier=catalogue
 
 [Install]
 WantedBy=multi-user.target
+
+[Unit]
+Description = Catalogue Service
+
