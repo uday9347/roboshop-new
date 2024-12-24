@@ -3,7 +3,7 @@
 date=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$?-$date.log"
 ID=$(id -u )
-if [ ID -ne  0 ]
+if [ $ID -ne  0 ]
 then 
     echo "swicth to the root user"
 else    
