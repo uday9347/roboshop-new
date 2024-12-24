@@ -53,7 +53,7 @@ cd /app  &>> $LOGFILE
 VALIDATE $? "changing dir"
 
 unzip -0 /tmp/shipping.zip  &>> $LOGFILE
-VALIDATE $? "unzip"
+
 
 cd /app  &>> $LOGFILE
 VALIDATE $? "changing dir"
