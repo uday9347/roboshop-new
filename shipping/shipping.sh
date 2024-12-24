@@ -2,6 +2,7 @@
 
 #user check 
 TIME=$(date +%F-%H-%M-%S)
+CRED=$(-uroot -pRoboShop@1)
 
 LOGFILE="/tmp/$0-$TIME.log"
 
@@ -74,11 +75,11 @@ systemctl start shipping
 dnf install mysql -y &>> $LOGFILE
 VALIDATE $? "installing sql "
 
-mysql -h 172.31.21.180 -uroot -pRoboShop@1 < /app/db/schema.sql
+mysql -h 172.31.21.180 $CRED < /app/db/schema.sql
 
-mysql -h 172.31.21.180 -uroot -pRoboShop@1 < /app/db/app-user.sql 
+mysql -h 172.31.21.180 $CRED< /app/db/app-user.sql 
 
-mysql -h 172.31.21.180 -uroot -pRoboShop@1 < /app/db/master-data.sql &>> $LOGFILE
+mysql -h 172.31.21.180 $CRED< /app/db/master-data.sql &>> $LOGFILE
 VALIDATE $? "added schema to db "
 
 systemctl restart shipping
